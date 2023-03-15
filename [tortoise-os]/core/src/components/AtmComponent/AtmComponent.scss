@@ -1,0 +1,45 @@
+:host {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    border: 1px solid red;
+    border-radius: 10px;
+    background: white;
+    color: black;
+}
+
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#closeButton svg {
+    height: 30px;
+    fill: red;
+}
+
+#solde {
+    margin-bottom: 50px;
+}
+
+#retraitInput {
+    padding: 10px 15px;
+    border: 1px solid red;
+    border-radius: 5px 0 0 5px;
+}
+#retraitButton {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid red;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    background: red;
+    color: white;
+}

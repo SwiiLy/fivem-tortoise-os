@@ -1,0 +1,173 @@
+:host {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 700px;
+    // border: 1px solid white;
+    // border-radius: 10px;
+    background: #000000e6;
+    color: white;
+    box-shadow: 0px 0px 20px #000000e6;
+    animation: zoomin 0.2s;
+    --color: #2e7ad6;
+    --colordarker: #0e396e;
+}
+
+
+.yellow  {
+    --color: #ffbb00;
+    --colordarker: #df6b16;
+}
+.green  {
+    --color: #3bc364;
+    --colordarker: #206e38;
+}
+.red  {
+    --color: #c33b3b;
+    --colordarker: #772626;
+}
+.purple  {
+    --color: #8f40bd;
+    --colordarker: #582874;
+}
+
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#closeButton svg {
+    filter: drop-shadow(black -3px 1px);
+    height: 30px;
+    fill: white;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+#headerInventaire {
+    background: linear-gradient(100deg, var(--colordarker), var(--color));
+} 
+
+#headerInventaire h1 {
+    font-family: "Halaney";
+    text-shadow: black -5px 1px;
+    font-size: 40px;
+    margin: 0;
+    padding: 15px 0 5px 0;
+}
+
+.title {
+    font-family: "Halaney";
+    font-size: 35px;
+    text-align: start;
+    margin: 5px 0;
+    padding-left: 15px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-bottom: 0;
+}
+
+
+
+#characterHead {
+    position: absolute;
+    top: 90px;
+    left: 281px;
+    width: 85px;
+    height: 85px;
+    border-radius: 3px;
+    border: 1px solid #ffffff80;
+    background-color: #ffffff20;
+}
+#characterHead img {
+    width: 85px;
+    height: 85px;
+}
+#characterWeapon1 {
+    position: absolute;
+    top: 95px;
+    left: 20px;
+    width: 85px;
+    height: 85px;
+    border-radius: 3px;
+    border: 1px solid #ffffff80;
+    background-color: #ffffff20;
+}
+#characterWeapon2 {
+    position: absolute;
+    top: 195px;
+    left: 20px;
+    width: 85px;
+    height: 85px;
+    border-radius: 3px;
+    border: 1px solid #ffffff80;
+    background-color: #ffffff20;
+}
+#characterWeapon1 img, #characterWeapon2 img {
+    width: 85px;
+    height: 85px;
+}
+
+#characterBody {
+    position: absolute;
+    top: 230px;
+    left: 276px;
+    width: 95px;
+    height: 135px;
+    border-radius: 3px;
+    border: 1px solid #ffffff80;
+    background-color: #ffffff20;
+}
+
+.item {
+    text-align: start;
+    padding: 5px;
+    background: #ffffff20;
+}
+.item img {
+    width: 22px;
+}
+.item .item-label {
+    position: relative;
+    top: -3px;
+    padding: 0 10px;
+}
+
+.dragging {
+    width: 80px;
+    height: 80px;
+    background: #ffffff80;
+    border: 1px solid #ffffffb7;
+}
+.dragging img {
+    width: 80px;
+    height: 80px;
+}
+
+.dragover {
+    opacity: 0.5;
+}

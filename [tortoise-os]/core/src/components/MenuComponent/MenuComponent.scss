@@ -1,0 +1,178 @@
+:host {
+    position: absolute;
+    width: 450px;
+    right: 75px;
+    top: 45px;
+    --color: #2e7ad6;
+    --colordarker: #0e396e;
+}
+
+.yellow {
+    --color: #ffbb00;
+    --colordarker: #df6b16;
+}
+.green {
+    --color: #3bc364;
+    --colordarker: #206e38;
+}
+.red {
+    --color: #c33b3b;
+    --colordarker: #772626;
+}
+.purple {
+    --color: #8f40bd;
+    --colordarker: #582874;
+}
+
+svg {
+    fill: white;
+    height: 19px;
+}
+#menuHeader {
+    padding: 30px 20px 10px 20px;
+    background: linear-gradient(100deg, var(--colordarker), var(--color));
+}
+
+
+#menuHeader h2 {
+    font-size: 60px;
+    text-shadow: black -5px 0;
+    font-family: 'Halaney';
+    line-height: 62px;
+    max-height: 140px;
+}
+#menuFooter {
+    font-size: 16px;
+    border-top: 3px solid black;
+    margin-top: 4px;
+    padding: 5px 20px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6)!important;
+}
+#menuFooter p {
+    margin: 0;
+    font-weight: 600;
+    font-family: Bahnschrift;
+}
+#oba {
+    font-size: 16px;
+    margin-top: 4px;
+    padding: 7px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.9)!important;
+    height: 32px;
+}
+#oba svg {
+    margin-top: 3px;
+    color: white;
+    height: 19px;
+}
+#oba p {
+    margin: 0;
+    position: relative;
+    top: -7px;
+}
+#subTitle {
+    background-color: black;
+    padding: 5px 10px;
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+
+#subTitle p {
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow: hidden;
+    color: var(--color);
+}
+
+
+
+h2 {
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+#menu-list {
+    list-style-type: none;
+    border-radius: 0px;
+    max-height: 432px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    color: white!important;
+    background-color: rgba(0, 0, 0, 0.6)!important;
+    font-size: 19px;
+    font-family: Bahnschrift;
+    padding: 10px 15px;
+}
+
+.fas, .far {
+    font-size: 20px;
+}
+
+.quantity {
+    font-size: 18px;
+}
+
+.focused {
+    color: black!important;
+    background-color: white!important;
+}
+
+.focused .badge {
+    color: black;
+}
+
+.focused svg {
+    fill: black!important;
+}
+
+.p2x {
+    padding-top: 2px;
+}
+
+.slider-text {
+    position: relative;
+    top: -6px;
+    font-size: 17px;
+    font-weight: normal;
+    margin-right: -5px;
+}
+
+.badge-text {
+    position: relative;
+    top: 4px;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.badge svg {
+    position: relative;
+    top: 2px;
+}
+
+.chevrons {
+    margin: 0 5px;
+    height: 15px;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-center {
+    text-align: center;
+}

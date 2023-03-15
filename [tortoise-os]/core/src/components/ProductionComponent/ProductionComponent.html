@@ -1,0 +1,106 @@
+<slot name="prodslot"></slot>
+<div id="headerProduction">
+    <button id="closeButton"><svg viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg></button>
+    <h1>Production de <spa id="name"></span></h1>
+</div>
+<div id="contentProduction" style="display:flex;">
+    <div class="col">
+        <h3 class="title">Informations</h3>
+        <hr style="position:relative;top:-10px;">
+    </div>
+    <div class="col">
+        <h3 class="title">Stocks</h3>
+        <hr style="position:relative;top:-10px;">
+        <h4 class="title">Entrees</h4>
+        <hr style="position:relative;top:-10px;">
+        <div class="input" id="input1">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="inputItem1Icon">
+                <span class="itemName" id="inputItemName1">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput1i">
+                <button class="inputAdd" data-stock="inputItem1Stock" data-item="inputItem1Id" data-max="inputItem1Max" id="btnInput1">+</button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="inputItem1StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="inputItem1StockText">0</span>/<span id="inputItem1Max">1000</span></span>
+            </div>
+        </div>
+        <div class="input" id="input2">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="inputItem2Icon">
+                <span class="itemName" id="inputItemName2">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput2i">
+                <button class="inputAdd" data-stock="inputItem2Stock" data-item="inputItem2Id" data-max="inputItem2Max" id="btnInput2">+</button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="inputItem2StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="inputItem2StockText">0</span>/<span id="inputItem2Max">1000</span></span>
+            </div>
+        </div>
+        <div class="input" id="input3">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="inputItem3Icon">
+                <span class="itemName" id="inputItemName3">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput3i">
+                <button class="inputAdd" data-stock="inputItem3Stock" data-item="inputItem3Id" data-max="inputItem3Max" id="btnInput3">+</button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="inputItem3StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="inputItem3StockText">0</span>/<span id="inputItem3Max">1000</span></span>
+            </div>
+        </div>
+
+
+
+        <h4 class="title" style="margin-top:40px;">Sorties</h4>
+        <hr style="position:relative;top:-10px;">
+        <div class="output" id="output1">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="outputItem1Icon">
+                <span class="itemName" id="outputItemName1">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput1i">
+                <button class="outputGet" data-stock="outputItem1Stock" data-item="outputItem1Id" data-max="outputItem1Max" id="btnOutput1"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="outputItem1StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="outputItem1StockText">0</span>/<span id="outputItem1Max">1000</span></span>
+            </div>
+        </div>
+        <div class="output" id="output2">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="outputItem2Icon">
+                <span class="itemName" id="outputItemName2">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput2i">
+                <button class="outputGet" data-stock="outputItem2Stock" data-item="outputItem2Id" data-max="outputItem2Max" id="btnOutput2"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="outputItem2StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="outputItem2StockText">0</span>/<span id="outputItem2Max">1000</span></span>
+            </div>
+        </div>
+        <div class="output" id="output3">
+            <div class="label">
+                <img src="icons/turtle.png" alt="icon" id="outputItem3Icon">
+                <span class="itemName" id="outputItemName3">Item name</span>
+            </div>
+            <div class="progressgroup">
+                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput3i">
+                <button class="outputGet" data-stock="outputItem3Stock" data-item="outputItem3Id" data-max="outputItem3Max" id="btnOutput3"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
+                <div class="progressbar">
+                    <div class="progress" style="width: 0%;" id="outputItem3StockBar"></div>
+                </div>
+                <span class="progressquantity"><span id="outputItem3StockText">0</span>/<span id="outputItem3Max">1000</span></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+:host {
+    position: absolute;
+    bottom: 0px;
+    left: 9px;
+    margin-left: 20px;
+}
+
+
+@media screen and (min-height: 1000px) {
+    :host(.vehicle) {
+        left: 10px;
+        bottom: 220px;
+    }
+}
+
+@media screen and (min-height: 1400px) {
+    :host(.vehicle) {
+        left: 20px;
+        bottom: 270px;
+    }
+    @media screen and (min-width: 3000px) {
+        :host(.vehicle) {
+            left: 30px;
+        }
+    }
+    .notification {
+        width: 355px!important;
+    }
+    .notification h1 {
+        font-size: 20px!important;
+    }
+    .notification p {
+        font-size: 15px!important;
+    }
+}
+
+.notification {
+    transition: all 0.5s linear;
+    animation: slidein 0.4s forwards;
+    width: 265px;
+    min-height: 70px;
+    background-color: #333333a1;
+    border: 2px solid #3b78c3;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+.notification h1 {
+    font-size: 18px;
+    margin: 10px 0 0 10px;
+}
+.notification p {
+    font-size: 14px;
+    margin: 8px 5px 10px 10px;
+}
+
+.notification span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+}
+  
+.progress {
+    // transition: all 10s linear;
+    width: 0%;
+    height: 4px;
+    background-color: #3b78c3;
+}
+
+.success {
+    border: 2px solid #288828;
+}
+.success .progress {
+    background-color: #288828;
+}
+
+.error {
+    border: 2px solid #ff0000;
+}
+.error .progress {
+    background-color: #ff0000;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideout {
+    to {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

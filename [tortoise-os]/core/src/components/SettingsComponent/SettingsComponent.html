@@ -1,0 +1,41 @@
+<slot name="settingsslot"></slot>
+<div id="headerSetting">
+    <button id="closeButton"><svg viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg></button>
+    <h1>Parametres</h1>
+</div>
+<div id="contentSetting" style="display:flex;" class="purple">
+    <div style="width:50%;padding:10px 25px;">
+        <h3 class="title">Couleurs</h3>
+        <hr style="position: relative; top: -10px;">
+        <div id="pickerMenu" class="line">
+            <span>Couleur du thème :</span>
+            <div class="pickers">
+                <button class="colorMenu" data-color="blue" style="background:#3b78c3;"></button>
+                <button class="colorMenu" data-color="green" style="background:#3bc364;"></button>
+                <button class="colorMenu" data-color="red" style="background:#c33b3b;"></button>
+                <button class="colorMenu" data-color="yellow" style="background:#ffbb00;"></button>
+                <button class="colorMenu" data-color="purple" style="background:#8f40bd;"></button>
+            </div>
+        </div>
+        <div id="pickerVehicle" class="line disabled">
+            <span>Couleur du compteur du véhicule :</span>
+            <div class="pickers">
+                <button disabled="disabled" class="colorVehicle" data-color="blue" style="background:#3b78c3;"></button>
+                <button disabled="disabled" class="colorVehicle" data-color="green" style="background:#3bc364;"></button>
+                <button disabled="disabled" class="colorVehicle" data-color="red" style="background:#c33b3b;"></button>
+                <button disabled="disabled" class="colorVehicle" data-color="yellow" style="background:#ffbb00;"></button>
+                <button disabled="disabled" class="colorVehicle" data-color="purple" style="background:#8f40bd;"></button>
+            </div>
+        </div>
+        <h3 class="title">Sons</h3>
+        <hr style="position: relative; top: -10px;">
+        <div style="display:flex;justify-content: space-between;">
+            <label for="volume">Volume des notifications :</label>
+            <input type="range" id="volume" name="volume" min="0" max="10" value="10" style="width: 50%;">
+        </div>
+    </div>
+    <div style="width:50%;padding: 10px 25px;">
+        <h3 class="title">Autres</h3>
+        <hr style="position:relative;top:-10px;">
+    </div>
+</div>

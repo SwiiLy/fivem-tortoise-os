@@ -1,0 +1,70 @@
+:host {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);    
+    --color: #235ca1;
+}
+
+
+.yellow  {
+    --color: #d8ac1b;
+}
+.green  {
+    --color: #268041;
+}
+.red  {
+    --color: #912e2e;
+}
+.purple  {
+    --color: #733497;
+}
+
+
+.progressbar {
+    transition: all 0.5s linear;
+    animation: slidein 0.5s forwards;
+    width: 500px;
+    background-color: #333333a1;
+    border: 2px solid var(--color);
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.progressbar span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+}
+  
+.progress {
+    // transition: all 10s linear;
+    width: 0%;
+    height: 30px;
+    background-color: var(--color);
+    border-radius: 28px;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideout {
+    to {
+      transform: scale(0);
+      opacity: 0;
+    }
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
