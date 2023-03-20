@@ -13,6 +13,8 @@ export { NavbarComponent } from './components/NavbarComponent/NavbarComponent';
 export { NotificationComponent } from './components/NotificationComponent/NotificationComponent';
 // export { InventaireComponent } from './components/InventaireComponent/InventaireComponent';
 export { SettingsComponent } from './components/SettingsComponent/SettingsComponent';
+export { SoundComponent } from './components/SoundComponent/SoundComponent';
+export { CardComponent } from './components/CardComponent/CardComponent';
 
 
 // setTimeout(() => {

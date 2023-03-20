@@ -15,10 +15,10 @@ A FiveM NUI resource developed with webcomponent that includes the following fea
 
 In development : 
 - Notification improvements
-- Locales for translations (it's mainly in french)
 - ID Card and Driver license show
 - Top screen alert or news
 - Sound player for notifications/alers or other uses
+- Locales for translations (it's mainly in french)
 - Inventory
 
 To start resource copy `[tortoise-os]` folder on your FiveM server then install and compile nui with

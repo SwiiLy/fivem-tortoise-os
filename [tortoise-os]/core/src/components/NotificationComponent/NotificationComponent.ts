@@ -22,12 +22,9 @@ export class NotificationComponent extends HTMLElement {
         this.shadowRoot?.appendChild(styleElement);
 
 
-        // this.createNotification(5000, "Inventaire", "Une erreur s'est produite", "success")
+        // this.createNotification(10000, "Inventaire", "Une erreur s'est produite", "success")
 		// setTimeout(() => {
-		// 	this.createNotification(2000, "Cuisson de la viande ...")
-		// 	setTimeout(() => {
-		// 		this.createNotification(2000)
-		// 	}, 1000);
+		// 	this.createNotification(10000, "Inventaire", "Une erreur s'est produite", "info")
 		// }, 1000);
 
         // window.onload = () => {
