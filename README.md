@@ -8,16 +8,17 @@ A FiveM NUI resource developed with webcomponent that includes the following fea
 - Notifications
 - Progress Bars
 - Menu
-- Settings (NUI Color Theme atm)
+- Settings (NUI Color Theme)
 - Dropdown Toolbar Menu
 - Simple Bank and ATM
 - Custom interfaces for other resources of my private server
+- ID Card
+- Sound player for notifications/alers or other uses
 
 In development : 
 - Notification improvements
-- ID Card and Driver license show
+- Driver license 
 - Top screen alert or news
-- Sound player for notifications/alers or other uses
 - Locales for translations (it's mainly in french)
 - Inventory
 

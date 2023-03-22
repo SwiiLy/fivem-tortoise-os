@@ -6,17 +6,19 @@
     height: 250px;
     border: 1px solid black;
     border-radius: 6px;
-    background: white;
+    background: url('idbg.png');
+    background-size: cover;
     color: black;
     text-align: start;
     padding: 0 25px;
 }
-
 h1 {
     text-align: center;
     margin: 15px 0;
     font-size: 28px;
     font-style: italic;
+    color: #34369f;
+    text-shadow: 0 0 5px #ffde2a;
 }
 
 #subtitle {
@@ -25,6 +27,8 @@ h1 {
     right: 50px;
     top: 30px;
     font-style: italic;
+    color: #ffde2a;
+    text-shadow: 0 0 5px #34369f;
 }
 
 .sb {
@@ -32,4 +36,18 @@ h1 {
     justify-content: space-between;
     margin: 0;
     margin-bottom: 5px;
+    color: #34369f;
+    text-shadow: 0 0 2px #ffde2a;
+    text-shadow: 0 0 2px #ffde2a;
+    font-weight: bold;
+}
+.sb span {
+    font-weight: normal;
+    color: black;
+    text-shadow: none;
+}
+
+svg {
+    fill: #232471;
+    filter: drop-shadow(0 0 2px #ffde2a);
 }
