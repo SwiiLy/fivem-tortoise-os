@@ -28,34 +28,40 @@ export { CardComponent } from './components/CardComponent/CardComponent';
 //     }
 //     }, "http://localhost:3000/")
 // }, 500);
-// setTimeout(() => {
-//     window.postMessage({type:"ui",action:"production",display:true,prod:{
-//         name: "Brocoli",
-//         inputItem1: {
-//             name: "Graines de brocoli",
-//             icon: "seedweed.png"
-//         },
-//         inputItem1Id: 10,
-//         inputItem1Quantity: 356,
-//         inputItem1Max: 1000,
-//         inputItem2: {
-//             name: "Engrais",
-//             icon: "seedweed.png"
-//         },
-//         inputItem2Id: 20,
-//         inputItem2Quantity: 719,
-//         inputItem2Max: 1000,
-//         outputItem1: {
-//             name: "Brocoli",
-//             icon: "broccoli.png"
-//         },
-//         outputItem1Id: 10,
-//         outputItem1Quantity: 124,
-//         outputItem1Max: 1000,
-//         itemRawName: "Farine",
-//         itemRawId: 5}
-//     }, "http://localhost:3000/")
-// }, 100);
+setTimeout(() => {
+    window.postMessage({type:"ui",action:"production",display:true,prod:{
+        name: "Brocoli",
+        msInterval: 3000,
+        inputItem1: {
+            name: "Graines de brocoli",
+            icon: "turtle.png"
+        },
+        inputItem1Id: 10,
+        inputItem1Quantity: 1,
+        inputItem1Stock: 356,
+        inputItem1Max: 1000,
+        inputItem2: {
+            name: "Engrais",
+            icon: "turtle.png"
+        },
+        inputItem2Id: 20,
+        inputItem2Quantity: 1,
+        inputItem2Stock: 719,
+        inputItem2Max: 1000,
+        inputItem2Multiplier: 2,
+        inputItem2Optional: true,
+        outputItem1: {
+            name: "Brocoli",
+            icon: "turtle.png"
+        },
+        outputItem1Id: 10,
+        outputItem1Stock: 124,
+        outputItem1Quantity: 5,
+        outputItem1Max: 1000,
+        itemRawName: "Farine",
+        itemRawId: 5}
+    }, "http://localhost:3000/")
+}, 100);
 // window.postMessage({type:"non",content:"non"}, "http://localhost:3000/")
 
 
