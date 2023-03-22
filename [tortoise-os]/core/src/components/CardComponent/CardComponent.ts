@@ -34,12 +34,19 @@ export class CardComponent extends HTMLElement {
 
     attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
         if (name=="set") {
-			this.shadowRoot!.querySelector<HTMLElement>('[id="soldeContent"]')!.innerText = newValue.replace(/\B(?=(\d{3})+(?!\d))/g, "'");
-			this.shadowRoot!.querySelector<HTMLElement>('[id="retraitInput"]')!.setAttribute("max",newValue)
+			let character = JSON.parse(newValue)
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardId"]')!.innerText = "00049342000000"+character.id
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardName"]')!.innerText = character.firstName+" "+character.lastName
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardBirthday"]')!.innerText = character.birthday
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardSexe"]')!.innerText = character.sexe
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardCreatedAt"]')!.innerText = character.createdAt
         } 
 		if (name=="visible"){
 			if (newValue=="true") {
 				document.getElementById("CardComponent")!.hidden = false
+				setTimeout(() => {
+					document.getElementById("CardComponent")!.hidden = true
+				}, 10000);
 			} else {
 				document.getElementById("CardComponent")!.hidden = true
 			}

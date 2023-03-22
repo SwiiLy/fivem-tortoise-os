@@ -18,6 +18,17 @@ export { CardComponent } from './components/CardComponent/CardComponent';
 
 
 // setTimeout(() => {
+//     window.postMessage({type:"ui",action:"card",visible:true,character:{
+//         id: "12",
+//         firstName: "John",
+//         lastName: "MacCanzy",
+//         birthday: "18/08/1987",
+//         sexe: "H",
+//         createdAt: "10/01/2023"
+//     }
+//     }, "http://localhost:3000/")
+// }, 500);
+// setTimeout(() => {
 //     window.postMessage({type:"ui",action:"production",display:true,prod:{
 //         name: "Brocoli",
 //         inputItem1: {
@@ -125,6 +136,10 @@ window.onload = () => {
                 const atmComponent = document.getElementById("AtmComponent") as HTMLElement;
                 item.visible != undefined ? atmComponent.setAttribute("visible", item.visible) : null
                 atmComponent.setAttribute("bank", item.data.bank)
+            } else if (item.action == "card") {
+                const cardComponent = document.getElementById("CardComponent") as HTMLElement;
+                item.visible != undefined ? cardComponent.setAttribute("visible", item.visible) : null
+                item.character != undefined ? cardComponent.setAttribute("set", JSON.stringify(item.character)) : null;
             }
         }
     })
