@@ -185,7 +185,7 @@ export class MenuComponent extends HTMLElement {
 					let el = document.getElementById(String(this.focusedIndex));
 					el?.scrollIntoView({ behavior: 'auto', block: "center" });
 				}
-				await axios.post('http://core/sound', {type: "BACK"}).then();
+				await axios.post('http://core/navigate', {type: "BACK"}).then();
 				break
 			case "ArrowUp":
 				if (this.displayList) {
@@ -210,7 +210,7 @@ export class MenuComponent extends HTMLElement {
 							el!.scrollIntoView({ behavior: 'auto', block: "center" });
 						}
 					}
-					await axios.post('http://core/sound', {type: "NAV_UP_DOWN", uuid: this.uuid, menuType: this.type, position: this.focusedIndex}).then();
+					await axios.post('http://core/navigate', {type: "NAV_UP_DOWN", uuid: this.uuid, menuType: this.type, position: this.focusedIndex}).then();
 					if (this.displayList.length > 1) {
 						this.shadowRoot!.querySelector<HTMLElement>('[id="subtitleCount"]')!.innerText = (this.focusedIndex+1)+"/"+this.displayList.length
 					}
@@ -237,7 +237,7 @@ export class MenuComponent extends HTMLElement {
 						el!.classList.add("focused")
 						el!.scrollIntoView({ behavior: 'auto', block: "center" });
 					}
-					await axios.post('http://core/sound', {type: "NAV_UP_DOWN", uuid: this.uuid, menuType: this.type, position: this.focusedIndex}).then();
+					await axios.post('http://core/navigate', {type: "NAV_UP_DOWN", uuid: this.uuid, menuType: this.type, position: this.focusedIndex}).then();
 					if (this.displayList.length > 1) {
 						this.shadowRoot!.querySelector<HTMLElement>('[id="subtitleCount"]')!.innerText = (this.focusedIndex+1)+"/"+this.displayList.length
 					}
@@ -248,12 +248,12 @@ export class MenuComponent extends HTMLElement {
 					case "slider":
 						this.displayList[this.focusedIndex].value === this.displayList[this.focusedIndex].list.length-1 ? this.displayList[this.focusedIndex].value = 0 : this.displayList[this.focusedIndex].value++;
 						await axios.post('http://core/sliderchange', {uuid: this.uuid, menuType: this.type, position: this.focusedIndex, value: this.displayList[this.focusedIndex].list[this.displayList[this.focusedIndex].value], valuePosition: this.displayList[this.focusedIndex].value}).then();
-						await axios.post('http://core/sound', {type: "SELECT"}).then();
+						await axios.post('http://core/navigate', {type: "SELECT"}).then();
 						this.updateSlider()
 					break;
 					case "submenu":
 						await axios.post('http://core/requestSubmenu', {uuid:this.displayList[this.focusedIndex].uuid}).then();
-					await axios.post('http://core/sound', {type: "SELECT"}).then();
+					await axios.post('http://core/navigate', {type: "SELECT"}).then();
 					break;
 					}
 				break
@@ -273,7 +273,7 @@ export class MenuComponent extends HTMLElement {
 						await axios.post('http://core/requestSubmenu', {uuid:this.displayList[this.focusedIndex].uuid}).then();
 					break;
 					}
-				await axios.post('http://core/sound', {type: "SELECT"}).then();
+				await axios.post('http://core/navigate', {type: "SELECT"}).then();
 				break
 		}
 	}
