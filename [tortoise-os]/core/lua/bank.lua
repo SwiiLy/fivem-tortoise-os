@@ -38,8 +38,8 @@ function setBanksMarkers()
                 end
                 Citizen.Wait(interval)
             end
-        end
-    end)
+        end)
+    end
 end
 
 function setBanksBlips()

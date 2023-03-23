@@ -335,6 +335,48 @@ end)
 
 
 
+RegisterNetEvent('tortoise_core:requestIDCard')
+AddEventHandler('tortoise_core:requestIDCard', function(serverId)
+  if serverId and serverId ~= 0 then
+    TriggerServerEvent('tortoise_core:requestIDCard', serverId, character)
+  else
+    TriggerEvent("notifynui", "error", "Inventaire", "Tu n'as personne devant toi.")
+  end
+end)
+
+
+RegisterNetEvent('tortoise_core:openIDCard')
+AddEventHandler('tortoise_core:openIDCard', function(c)
+  if c == 'self' then 
+    SendNUIMessage({
+      type = "ui",
+      action = "card",
+      visible = true,
+      character = {
+        id = character.id,
+        firstName = character.firstName,
+        lastName = character.lastName,
+        birthday = character.birthday,
+        sexe = character.sexe,
+        createdAt = character.createdAt,
+      }
+    })
+  else
+    SendNUIMessage({
+      type = "ui",
+      action = "card",
+      visible = true,
+      character = {
+        id = c.id,
+        firstName = c.firstName,
+        lastName = c.lastName,
+        birthday = c.birthday,
+        sexe = c.sexe,
+        createdAt = c.createdAt,
+      }
+    })
+  end
+end)
 
 
 

@@ -24,9 +24,11 @@ AddEventHandler('baseevents:onPlayerDied', function(killerType, deathCoords)
 end)
 
 
-
-
-
+RegisterNetEvent("tortoise_core:requestIDCard")
+AddEventHandler('tortoise_core:requestIDCard', function(id, character)
+	local _src = source
+    TriggerClientEvent("tortoise_core:openIDCard", id, character)
+end)
 
 
 

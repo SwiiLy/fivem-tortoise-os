@@ -35,11 +35,15 @@ export class CardComponent extends HTMLElement {
     attributeChangedCallback(name: string, _oldValue: string, newValue: string) {
         if (name=="set") {
 			let character = JSON.parse(newValue)
+			let createdDate = new Date(Number(character.createdAt))
+			let createdText = (createdDate.getDate()<10?'0'+createdDate.getDate():createdDate.getDate())+'/'+((createdDate.getMonth()+1)<10?'0'+(createdDate.getMonth()+1):(createdDate.getMonth()+1))+'/'+createdDate.getFullYear();
+			let birthDate = new Date(Number(character.birthday))
+			let birthText = (birthDate.getDate()<10?'0'+birthDate.getDate():birthDate.getDate())+'/'+((birthDate.getMonth()+1)<10?'0'+(birthDate.getMonth()+1):(birthDate.getMonth()+1))+'/'+birthDate.getFullYear();
 			this.shadowRoot!.querySelector<HTMLElement>('[id="cardId"]')!.innerText = "00049342000000"+character.id
 			this.shadowRoot!.querySelector<HTMLElement>('[id="cardName"]')!.innerText = character.firstName+" "+character.lastName
-			this.shadowRoot!.querySelector<HTMLElement>('[id="cardBirthday"]')!.innerText = character.birthday
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardBirthday"]')!.innerText = birthText
 			this.shadowRoot!.querySelector<HTMLElement>('[id="cardSexe"]')!.innerText = character.sexe
-			this.shadowRoot!.querySelector<HTMLElement>('[id="cardCreatedAt"]')!.innerText = character.createdAt
+			this.shadowRoot!.querySelector<HTMLElement>('[id="cardCreatedAt"]')!.innerText = createdText
         } 
 		if (name=="visible"){
 			if (newValue=="true") {
