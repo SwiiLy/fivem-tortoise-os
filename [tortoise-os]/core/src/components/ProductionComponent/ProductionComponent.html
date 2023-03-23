@@ -1,17 +1,135 @@
 <slot name="prodslot"></slot>
 <div id="headerProduction">
     <button id="closeButton"><svg viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg></button>
-    <h1>Production de <spa id="name"></span></h1>
+    <h1>Production : <span id="name"></span></h1>
 </div>
 <div id="contentProduction" style="display:flex;">
     <div class="col">
         <h3 class="title">Informations</h3>
         <hr style="position:relative;top:-10px;">
+        <div class="row">
+            <div style="width:40%;">
+                <h4 class="title" style="display:flex;justify-content:space-between;">
+                    Inputs
+                    <svg width="30" viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+                </h4>
+                <div id="input1bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="inputItem1Iconbis">
+                            <span id="inputItemName1bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="inputItemQuantity1">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="input2bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="inputItem2Iconbis">
+                            <span id="inputItemName2bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="inputItemQuantity2">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="input3bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="inputItem3Iconbis">
+                            <span id="inputItemName3bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="inputItemQuantity3">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:20%;text-align:center;">
+                <h4 class="title" style="display:flex;">
+                    <svg width="30" viewBox="0 0 512 512" style="padding:0 5px;"><path d="M126.9 142.9c62.2-62.2 162.7-62.5 225.3-1L311 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H447.5c0 0 0 0 0 0H456c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L397.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C57.2 122 39.6 150.7 28.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM0 312v7.6 .7V440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L169 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H32.4h-.7H24c-13.3 0-24 10.7-24 24z"/></svg>
+                    <span id="prodDuration">10</span>s
+                </h4>
+                <div style="text-align:start;">
+                    <div id="input1ter">
+                        <div id="input1required" class="label" style="margin:12px 10px;">
+                            <span style="color:#aaaaaa;font-style:italic;">Required</span>
+                        </div>
+                    </div>
+                    <div id="input2ter">
+                        <div id="input2optional" class="label" style="margin:12px 10px;">
+                            <span style="color:#aaaaaa;font-style:italic;">Optional (prod x<span id="outputItemMultiplier2">2</span>)</span>
+                        </div>
+                        <div id="input2required" class="label" style="margin:12px 10px;">
+                            <span style="color:#aaaaaa;font-style:italic;">Required</span>
+                        </div>
+                    </div>
+                    <div id="input3ter">
+                        <div id="input3optional" class="label" style="margin:12px 10px;">
+                            <span style="color:#aaaaaa;font-style:italic;">Optional (prod x<span id="outputItemMultiplier3">2</span>)</span>
+                        </div>
+                        <div id="input3required" class="label" style="margin:12px 10px;">
+                            <span style="color:#aaaaaa;font-style:italic;">Required</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width:40%;">
+                <h4 class="title" style="display:flex;justify-content:space-between;">
+                    <svg width="30" viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
+                    Outputs
+                </h4>
+                <div id="output1bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="outputItem1Iconbis">
+                            <span id="outputItemName1bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="outputItemQuantity1">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="output2bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="outputItem2Iconbis">
+                            <span id="outputItemName2bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="outputItemQuantity2">1</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="output3bis">
+                    <div class="label itemInfo">
+                        <div>
+                            <img src="icons/turtle.png" alt="icon" id="outputItem3Iconbis">
+                            <span id="outputItemName3bis">Item name</span>
+                        </div>
+                        <div style="position:relative;top:15px;">
+                            x<span id="outputItemQuantity3">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="title" style="margin-top:20px;">Upgrades</h3>
+        <hr style="position:relative;top:-10px;">
+        <p>WIP</p>
     </div>
+
+
+
     <div class="col">
         <h3 class="title">Stocks</h3>
         <hr style="position:relative;top:-10px;">
-        <h4 class="title">Entrees</h4>
+        <h4 class="title" style="display:flex;">
+            <svg width="30" style="margin-right:20px;" viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+            Inputs
+        </h4>
         <hr style="position:relative;top:-10px;">
         <div class="input" id="input1">
             <div class="label">
@@ -19,7 +137,7 @@
                 <span class="itemName" id="inputItemName1">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput1i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnInput1i">
                 <button class="inputAdd" data-stock="inputItem1Stock" data-item="inputItem1Id" data-max="inputItem1Max" id="btnInput1">+</button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="inputItem1StockBar"></div>
@@ -33,7 +151,7 @@
                 <span class="itemName" id="inputItemName2">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput2i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnInput2i">
                 <button class="inputAdd" data-stock="inputItem2Stock" data-item="inputItem2Id" data-max="inputItem2Max" id="btnInput2">+</button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="inputItem2StockBar"></div>
@@ -47,7 +165,7 @@
                 <span class="itemName" id="inputItemName3">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnInput3i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnInput3i">
                 <button class="inputAdd" data-stock="inputItem3Stock" data-item="inputItem3Id" data-max="inputItem3Max" id="btnInput3">+</button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="inputItem3StockBar"></div>
@@ -58,7 +176,11 @@
 
 
 
-        <h4 class="title" style="margin-top:40px;">Sorties</h4>
+        <!-- <h4 class="title" style="margin-top:40px;">Outputs</h4> -->
+        <h4 class="title" style="display:flex;margin-top:40px;">
+            Outputs
+            <svg width="30" style="margin-left:20px;" viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
+        </h4>
         <hr style="position:relative;top:-10px;">
         <div class="output" id="output1">
             <div class="label">
@@ -66,7 +188,7 @@
                 <span class="itemName" id="outputItemName1">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput1i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnOutput1i">
                 <button class="outputGet" data-stock="outputItem1Stock" data-item="outputItem1Id" data-max="outputItem1Max" id="btnOutput1"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="outputItem1StockBar"></div>
@@ -80,7 +202,7 @@
                 <span class="itemName" id="outputItemName2">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput2i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnOutput2i">
                 <button class="outputGet" data-stock="outputItem2Stock" data-item="outputItem2Id" data-max="outputItem2Max" id="btnOutput2"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="outputItem2StockBar"></div>
@@ -94,7 +216,7 @@
                 <span class="itemName" id="outputItemName3">Item name</span>
             </div>
             <div class="progressgroup">
-                <input type="text" placeholder="Quantité" maxlength="5" id="btnOutput3i">
+                <input type="text" placeholder="Quantity" maxlength="5" id="btnOutput3i">
                 <button class="outputGet" data-stock="outputItem3Stock" data-item="outputItem3Id" data-max="outputItem3Max" id="btnOutput3"><svg fill="white" height="18px" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></button>
                 <div class="progressbar">
                     <div class="progress" style="width: 0%;" id="outputItem3StockBar"></div>

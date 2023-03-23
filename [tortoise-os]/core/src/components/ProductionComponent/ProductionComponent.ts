@@ -97,65 +97,104 @@ export class ProductionComponent extends HTMLElement {
 		this.prod = JSON.parse(newprod)
 		if (this.prod) {
 			this.shadowRoot!.querySelector<HTMLElement>('[id="name"]')!.innerText = this.prod.name
+			this.shadowRoot!.querySelector<HTMLElement>('[id="prodDuration"]')!.innerText = String(this.prod.msInterval/1000)
 			if (this.prod.inputItem1Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName1"]')!.innerText = String(this.prod.inputItem1.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName1bis"]')!.innerText = String(this.prod.inputItem1.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemQuantity1"]')!.innerText = String(this.prod.inputItem1Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem1Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.inputItem1.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem1StockText"]')!.innerText = String(this.prod.inputItem1Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem1Max"]')!.innerText = String(this.prod.inputItem1Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem1StockBar"]')!.style.width = ((this.prod.inputItem1Stock/this.prod.inputItem1Max)*100)+"%"
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input1"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input1bis"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input1ter"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input1"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input1bis"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input1ter"]')!.hidden = true
 			}
 			if (this.prod.inputItem2Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName2"]')!.innerText = String(this.prod.inputItem2.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName2bis"]')!.innerText = String(this.prod.inputItem2.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemQuantity2"]')!.innerText = String(this.prod.inputItem2Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem2Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.inputItem2.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem2StockText"]')!.innerText = String(this.prod.inputItem2Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem2Max"]')!.innerText = String(this.prod.inputItem2Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem2StockBar"]')!.style.width = ((this.prod.inputItem2Stock!/this.prod.inputItem2Max!)*100)+"%"
+				if (this.prod.inputItem2Optional) {
+					this.shadowRoot!.querySelector<HTMLElement>('[id="input2optional"]')!.hidden = false
+					this.shadowRoot!.querySelector<HTMLElement>('[id="input2required"]')!.hidden = true
+					this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemMultiplier2"]')!.innerText = String(this.prod.inputItem2Multiplier?this.prod.inputItem2Multiplier:"0")
+				} else {
+					this.shadowRoot!.querySelector<HTMLElement>('[id="input2optional"]')!.hidden = true
+					this.shadowRoot!.querySelector<HTMLElement>('[id="input2required"]')!.hidden = false
+				}
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input2"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input2bis"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input2ter"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input2"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input2bis"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input2ter"]')!.hidden = true
 			}
 			if (this.prod.inputItem3Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName3"]')!.innerText = String(this.prod.inputItem3.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemName3bis"]')!.innerText = String(this.prod.inputItem3.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItemQuantity3"]')!.innerText = String(this.prod.inputItem3Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem3Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.inputItem3.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem3StockText"]')!.innerText = String(this.prod.inputItem3Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem3Max"]')!.innerText = String(this.prod.inputItem3Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="inputItem3StockBar"]')!.style.width = ((this.prod.inputItem3Stock!/this.prod.inputItem3Max!)*100)+"%"
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input3"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input3bis"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input3ter"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="input3"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input3bis"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="input3ter"]')!.hidden = true
 			}
 			if (this.prod.outputItem1Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName1"]')!.innerText = String(this.prod.outputItem1.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName1bis"]')!.innerText = String(this.prod.outputItem1.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemQuantity1"]')!.innerText = String(this.prod.outputItem1Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem1Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.outputItem1.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem1StockText"]')!.innerText = String(this.prod.outputItem1Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem1Max"]')!.innerText = String(this.prod.outputItem1Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem1StockBar"]')!.style.width = ((this.prod.outputItem1Stock/this.prod.outputItem1Max)*100)+"%"
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output1"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output1bis"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output1"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output1bis"]')!.hidden = true
 			}
 			if (this.prod.outputItem2Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName2"]')!.innerText = String(this.prod.outputItem2.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName2bis"]')!.innerText = String(this.prod.outputItem2.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemQuantity2"]')!.innerText = String(this.prod.outputItem2Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem2Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.outputItem2.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem2StockText"]')!.innerText = String(this.prod.outputItem2Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem2Max"]')!.innerText = String(this.prod.outputItem2Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem2StockBar"]')!.style.width = ((this.prod.outputItem2Stock!/this.prod.outputItem2Max!)*100)+"%"
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output2"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output2bis"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output2"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output2bis"]')!.hidden = true
 			}
 			if (this.prod.outputItem3Id) {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName3"]')!.innerText = String(this.prod.outputItem3.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemName3bis"]')!.innerText = String(this.prod.outputItem3.name)
+				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItemQuantity3"]')!.innerText = String(this.prod.outputItem3Quantity)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem3Icon"]')!.setAttribute("src", "icons/assets/"+this.prod.outputItem3.icon)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem3StockText"]')!.innerText = String(this.prod.outputItem3Stock)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem3Max"]')!.innerText = String(this.prod.outputItem3Max)
 				this.shadowRoot!.querySelector<HTMLElement>('[id="outputItem3StockBar"]')!.style.width = ((this.prod.outputItem3Stock!/this.prod.outputItem3Max!)*100)+"%"
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output3"]')!.hidden = false
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output3bis"]')!.hidden = false
 			} else {
 				this.shadowRoot!.querySelector<HTMLElement>('[id="output3"]')!.hidden = true
+				this.shadowRoot!.querySelector<HTMLElement>('[id="output3bis"]')!.hidden = true
 			}
 		}
 	}

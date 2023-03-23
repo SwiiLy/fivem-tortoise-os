@@ -16,6 +16,7 @@ A FiveM NUI resource developed with webcomponent that includes the following fea
 - Sound player for notifications/alers or other uses
 
 In development : 
+- Talent tree production
 - Notification improvements
 - Driver license 
 - Top screen alert or news
@@ -44,6 +45,3 @@ ensure menu
 # Informations
 
 It's a little fivem resource still in development for my private server, that may not work perfectly. Documentation may not be complete. I will try to adapt it for exernal use and remove or adjust the custom parts coming from my others resources. Feel free to give me any feedbacks or suggestions. 
-
-
-This project is under GNU General Public License v3.0
