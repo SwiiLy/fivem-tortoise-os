@@ -95,7 +95,7 @@ Citizen.CreateThread(function()
         })
       end
     end
-    if IsPedInAnyVehicle(GetPlayerPed(-1), false) then 
+    if IsPedInAnyVehicle(PlayerPedId(), false) then 
       if not displayVehicle then 
         displayVehicle = true
         SendNUIMessage({
@@ -124,11 +124,11 @@ end)
 Citizen.CreateThread(function()
   while true do
     local interval = 1000
-    local ped = GetPlayerPed(-1)
+    local ped = PlayerPedId()
     if DoesEntityExist(ped) and not IsEntityDead(ped) then
       interval = 100
       local oxygen = nil
-      if(IsPedSwimmingUnderWater(GetPlayerPed(-1))) then
+      if(IsPedSwimmingUnderWater(PlayerPedId())) then
         oxygen = GetPlayerUnderwaterTimeRemaining(PlayerId())
         if oxygen < 0 then 
           oxygen = 0 
@@ -177,10 +177,10 @@ Citizen.CreateThread(function()
   })
   while true do
     local interval = 1000
-    if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then 
+    if IsPedSittingInAnyVehicle(PlayerPedId()) then 
       interval = 100
       local currentVehicle = GetVehiclePedIsIn(PlayerPedId())
-      if  GetPedInVehicleSeat(currentVehicle, -1) == GetPlayerPed(-1) and GetVehicleClass(currentVehicle) ~= 13 then
+      if  GetPedInVehicleSeat(currentVehicle, -1) == PlayerPedId() and GetVehicleClass(currentVehicle) ~= 13 then
         interval = 10
         displayVehicle = true
         -- local phare0, phare1, phare2 = GetVehicleLightsState(currentVehicle)

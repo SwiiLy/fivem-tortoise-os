@@ -71,7 +71,7 @@ AddEventHandler('openAtm', function(atype)
 	while not HasAnimDictLoaded('anim@heists@keycard@') do
 		Citizen.Wait(0)
 	end
-	TaskPlayAnim( GetPlayerPed(-1), "anim@heists@keycard@", "enter", 8.0, 8.0, 2000, 16, 0, 0, 0, 0 )
+	TaskPlayAnim( PlayerPedId(), "anim@heists@keycard@", "enter", 8.0, 8.0, 2000, 16, 0, 0, 0, 0 )
     Wait(1500)
     TriggerServerEvent("openAtm", "atm")
 end)
